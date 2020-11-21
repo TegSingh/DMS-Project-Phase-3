@@ -1,0 +1,29 @@
+<div id="branch-header"><h1>Library Branch</h1></div>
+<div id="branch-details">
+    <table border="1">
+        <tr>
+            <th>Branch ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Capacity</th>
+            <th>Number of Employee</th>
+            <th>Number of Books</th>
+            <th>Action</th>
+        </tr>
+        {% for branch in branchDetails %}
+        <tr>
+            <td> {{branch[0]}} </td>
+            <td> {{branch[1]}} </td>
+            <td> {{branch[2]}} </td>
+            <td> {{branch[3]}} </td>
+            <td> {{branch[4]}} </td>
+            <td> {{branch[5]}} </td>
+            <td>
+                <a href="/edit/{{branch[0]}}">Edit</a>
+                <a href="/delete/{{branch[0]}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back</a>
+</div>

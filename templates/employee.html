@@ -1,0 +1,29 @@
+<div id="employee-header"><h1>Employees</h1></div>
+<div id="employee-details">
+    <table border="1">
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Branch ID</th>
+            <th>Weekly Work Hours</th>
+            <th>Hourly Wages</th>
+            <th>Action</th>
+        </tr>
+        {% for employee in employeeDetails %}
+        <tr>
+            <td> {{employee[0]}} </td>
+            <td> {{employee[1]}} </td>
+            <td> {{employee[2]}} </td>
+            <td> {{employee[3]}} </td>
+            <td> {{employee[4]}} </td>
+            <td> {{employee[5]}} </td>
+            <td>
+                <a href="/edit/{{employee[0]}}">Edit</a>
+                <a href="/delete/{{employee[0]}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back</a>
+</div>

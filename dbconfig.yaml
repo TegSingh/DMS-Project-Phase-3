@@ -1,0 +1,5 @@
+# yaml is human readable data serialization language commonly used to create configuration files
+mysql_host: 'localhost'
+mysql_user: 'root'
+mysql_password: 'root'
+mysql_db: 'library_system'
