@@ -16,6 +16,20 @@
         <button id="borrowerSignUpSubmit" type="submit">Sign-Up</button>
     </form>
 </div> -->
+<div id="borrower-form-div">
+    <form id="borrower-form" action = "/borrower/insert" method="POST" >
+        <input  type="text" name="borrowerIDnew" placeholder="Enter Borrower ID" required>
+        <br>
+        <input type="text" name="borrowerName" placeholder="Enter Borrower Name" required>
+        <br>
+        <input type="email" name="email" placeholder="Enter Borrower Email" required>
+        <br>
+        <input type="text" name="phoneNumber" placeholder="Enter Borrower Phone Number" required>
+        <br>
+        <input type="submit">
+        <br>
+    </form>
+</div>
 <div id="borrower-header"><h1>Borrowers</h1></div>
 <div id="borrower-details">
     <table border="1">
@@ -24,9 +38,6 @@
             <th>Name</th>
             <th>Email</th>
             <th>Phone no</th>
-            <th>ISBN of Borrower Book</th>
-            <th>Date to be returned</th>
-            <th>Date Borrowed</th>
             <th>Action</th>
         </tr>
         {% for borrower in borrowerDetails %}
@@ -35,12 +46,9 @@
             <td> {{borrower[1]}} </td>
             <td> {{borrower[2]}} </td>
             <td> {{borrower[3]}} </td>
-            <td> {{borrower[4]}} </td>
-            <td> {{borrower[5]}} </td>
-            <td> {{borrower[6]}} </td>
             <td>
-                <a href="/edit/{{borrower[0]}}">Edit</a>
-                <a href="/delete/{{borrower[0]}}">Delete</a>
+                <a href="borrower/edit/{{borrower[0]}}">Edit</a>
+                <a href="borrower/delete/{{borrower[0]}}">Delete</a>
             </td> 
         </tr>
         {% endfor %}

@@ -1,4 +1,22 @@
 <div id="employee-header"><h1>Employees</h1></div>
+<div id="books-form-div">
+    <form id="books-form" action = "/employee/insert" method="POST" >
+        <input  type="number" name="employeeID" placeholder="Enter Employee ID" required>
+        <br>
+        <input type="text" name="employeeName" placeholder="Enter Employee Name" required>
+        <br>
+        <input type="text" name="employeeTitle" placeholder="Enter Employee Title" required>
+        <br>
+        <input type="number" name="branchIDemployee" placeholder="Enter Employee Branch" required>
+        <br>
+        <input type="number" name="weeklyHours" placeholder="Enter Work Hours" required>
+        <br>
+        <input type="number" name="hourlyWages" placeholder="Enter Hourly Wage" required>
+        <br>
+        <input type="submit">
+        <br>
+    </form>
+</div>
 <div id="employee-details">
     <table border="1">
         <tr>
@@ -19,8 +37,8 @@
             <td> {{employee[4]}} </td>
             <td> {{employee[5]}} </td>
             <td>
-                <a href="/edit/{{employee[0]}}">Edit</a>
-                <a href="/delete/{{employee[0]}}">Delete</a>
+                <a href="employee/edit/{{employee[0]}}">Edit</a>
+                <a href="employee/delete/{{employee[0]}}">Delete</a>
             </td>
         </tr>
         {% endfor %}
