@@ -1,0 +1,22 @@
+<h1>View 10</h1>
+<p><b>Use BETWEEN in a Query: </b>Get the list of all Employees with weekly Salary between 500 and 100</p>
+<table id="view10Table" border="1">
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Branch ID</th>
+        <th>Weekly Work Hours</th>
+        <th>Hourly Wages</th>
+    </tr>
+    {% for view10 in view10 %}
+    <tr>
+        <td>{{view10[0]}}</td>
+        <td>{{view10[1]}}</td>
+        <td>{{view10[2]}}</td>
+        <td>{{view10[3]}}</td>
+        <td>{{view10[4]}}</td>
+        <td>{{view10[5]}}</td>
+    </tr>
+    {% endfor %}
+</table>

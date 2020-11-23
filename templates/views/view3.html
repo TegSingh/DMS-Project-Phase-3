@@ -1,0 +1,22 @@
+<h1>View 3</h1>
+<p><b>A correlated nested query: </b>To get the list of all Manager with salary greater than average salary which is the product of hourly wage and weekly hours</p>
+<table id="view3Table" border="1">
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Branch ID</th>
+        <th>Weekly Work Hours</th>
+        <th>Hourly Wages</th>
+    </tr>
+    {% for view3 in view3 %}
+    <tr>
+        <td>{{view3[0]}}</td>
+        <td>{{view3[1]}}</td>
+        <td>{{view3[2]}}</td>
+        <td>{{view3[3]}}</td>
+        <td>{{view3[4]}}</td>
+        <td>{{view3[5]}}</td>
+    </tr>
+    {% endfor %}
+</table>

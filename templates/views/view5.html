@@ -1,0 +1,22 @@
+<h1>View 5</h1>
+<p><b>Uses Nested Queries with any of the set operations UNION, EXCEPT and INTERSECT: </b>Select all all branched with capacity greater than 300 and with number of employees greater than 20</p>
+<table id="view5Table" border="1">
+    <tr>
+        <th>Branch ID</th>
+        <th>Branch Name</th>
+        <th>Location</th>
+        <th>Capacity</th>
+        <th>Total number of employees</th>
+        <th>Number of books</th>
+    </tr>
+    {% for view5 in view5 %}
+    <tr>
+        <td>{{view5[0]}}</td>
+        <td>{{view5[1]}}</td>
+        <td>{{view5[2]}}</td>
+        <td>{{view5[3]}}</td>
+        <td>{{view5[4]}}</td>
+        <td>{{view5[5]}}</td>
+    </tr>
+    {% endfor %}
+</table>

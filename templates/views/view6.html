@@ -1,0 +1,16 @@
+<h1>View 6</h1>
+<p><b>Calculate required values using aggregate functions: </b>Select Minimum and Maximum Salary from the Employees Relation</p>
+<table id="view6Table" border="1">
+    <tr>
+        <th>Employee Name</th>
+        <th>Employee ID</th>
+        <th>Salary</th>
+    </tr>
+    {% for view6 in view6 %}
+    <tr>
+        <td>{{view6[0]}}</td>
+        <td>{{view6[1]}}</td>
+        <td>{{view6[2]}}</td>
+    </tr>
+    {% endfor %}
+</table>

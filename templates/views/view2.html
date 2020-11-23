@@ -1,0 +1,14 @@
+<h1>View 2</h1>
+<p><b>Uses nested queries with the ANY or ALL operator and uses a GROUP BY clause: </b>To get the Average Salary of the employees by branch ID</p>
+<table id="view2Table" border="1">
+    <tr>
+        <th>Branch ID</th>
+        <th>Average Salary</th>
+    </tr>
+    {% for view2 in view2 %}
+    <tr>
+        <td>{{view2[1]}}</td>
+        <td>{{view2[0]}}</td>
+    </tr>
+    {% endfor %}
+</table>

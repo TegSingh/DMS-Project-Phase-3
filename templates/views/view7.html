@@ -1,0 +1,14 @@
+<h1>View 7</h1>
+<p><b>Use SUM(), COUNT() and GROUP BY in an SQL query</b>To calculate the Number of Distinct books by each author</p>
+<table id="view7Table" border="1">
+    <tr>
+        <th>Author Name</th>
+        <th>Number of Disctinct books</th>
+    </tr>
+    {% for view7 in view7 %}
+    <tr>
+        <td>{{view7[0]}}</td>
+        <td>{{view7[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>

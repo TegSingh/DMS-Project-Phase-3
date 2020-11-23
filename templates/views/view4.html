@@ -1,0 +1,14 @@
+<h1>View 4</h1>
+<p><b>USES A FULL JOIN: </b>Display the full list of borrower and the name of the borrowed book using a Full Join</p>
+<table id="view4Table" border="1">
+    <tr>
+        <th>Books Title</th>
+        <th>Borrower Name</th>
+    </tr>
+    {% for view4 in view4 %}
+    <tr>
+        <td>{{view4[0]}}</td>
+        <td>{{view4[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>

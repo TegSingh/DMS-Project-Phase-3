@@ -1,0 +1,16 @@
+<h1>View 8</h1>
+<p><b>Use ORDER BY in a query to sort values in ascending or descending order: </b>Order the employees based on increasing order of their salary</p>
+<table id="view8Table" border="1">
+    <tr>
+        <th>Employee Name</th>
+        <th>Employee ID</th>
+        <th>Salary</th>
+    </tr>
+    {% for view8 in view8 %}
+    <tr>
+        <td>{{view8[0]}}</td>
+        <td>{{view8[1]}}</td>
+        <td>{{view8[2]}}</td>
+    </tr>
+    {% endfor %}
+</table>

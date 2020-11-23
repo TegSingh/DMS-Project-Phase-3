@@ -1,0 +1,18 @@
+<h1>View 1</h1>
+<p><b>COMPUTE A JOIN OF AT LEAST 3 TABLES:</b> To get the borrower name of all the books present in a specific branch by a certain author.</p>
+<table id="view1Table" border="1">
+    <tr>
+        <th>Borrower Name</th>
+        <th>Borrower ID</th>
+        <th>Branch ID</th>
+        <th>Author Name</th>
+    </tr>
+    {% for view1 in view1 %}
+    <tr>
+        <td>{{view1[0]}}</td>
+        <td>{{view1[1]}}</td>
+        <td>{{view1[2]}}</td>
+        <td>{{view1[3]}}</td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,12 @@
+<h1>View 9</h1>
+<p><b>Use Like/Between operator in a query: </b>To count the number of books borrowed in november </p>
+<table id="view9Table" border="1">
+    <tr>
+        <th>Books borrowed in November</th>
+    </tr>
+    {% for view9 in view9 %}
+    <tr>
+        <td>{{view9[0]}}</td>
+    </tr>
+    {% endfor %}
+</table>

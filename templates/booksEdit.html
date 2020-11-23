@@ -1,0 +1,27 @@
+<div><h1>Edit Book with ISBN {{bookEdit.0}}</h1></div>
+<div>
+    <form id="books-form-edit" action = "/books/update/{{bookEdit.0}}" method="POST">
+        <input type="text" name="titleEdit" placeholder="Enter Book Title" required>
+        <br>
+        <input type="text" name="genreEdit" placeholder="Enter Book genre" required>
+        <br>
+        <input type="text" name="publisherEdit" placeholder="Enter Book Publisher" required>
+        <br>
+        <input type="text" name="author_nameEdit" placeholder="Enter Book Author Name" required>
+        <br>
+        <input type="number" name="availabilityEdit" placeholder="Enter Book availability" required>
+        <br>
+        <input type="number" name="numberOfCopiesEdit" placeholder="Enter number of copies of book" required>
+        <br>
+        <input type="number" name="borrowerIDbooksEdit" placeholder="Enter borrower ID">
+        <br>
+        <input type="number" name="branchIDbooksEdit" placeholder="Enter Branch ID" required>
+        <br>
+        <input type="date" name="dateReturnBooksEdit" placeholder="Enter Return date for Book">
+        <br>
+        <input type="date" name="dateBorrowedBookEdit" placeholder="Enter borrow date">
+        <br>
+        <input type="submit">
+        <br>
+    </form>
+</div>
