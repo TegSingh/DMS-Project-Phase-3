@@ -1,0 +1,26 @@
+<h1>
+    Library Management System
+</h1>
+<div id="EmployeeForm">
+    <form id="EmployeeLogInForm" method = 'POST' action = "\login">
+        <input name="employeeLoginName" type="text" placeholder="Enter Employee Name" />
+        <br>
+        <input name="employeeLoginID" type="password" placeholder="Enter password" /> 
+        <br>
+        <input id="employeeLogInSubmit" type="submit">
+    </form>
+</div>
+<div id="searchBook">
+    <form id="searchbyTitle" method="POST" action="\titleSearch">
+        <input name="searchTitle" type="text" placeholder="Enter Book Title to search for: ">
+        <input type="submit">
+    </form>
+    <form id="searchbyAuthor" method="POST" action="\authorSearch">
+        <input name="searchAuthor" type="text" placeholder="Enter Author Name to search for: ">
+        <input type="submit">
+    </form>
+    <form id="searchbyGenre" method="POST" action="\genreSearch">
+        <input name="searchGenre" type="text" placeholder="Enter Genre to search for: ">
+        <input type="submit">
+    </form>
+</div>

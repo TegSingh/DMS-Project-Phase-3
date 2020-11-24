@@ -1,24 +1,3 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
-</head>
-<!-- <div class="Form">
-    <form id="borrowerLogInForm" method = 'POST' action = "">
-        <input name="name" type="text" placeholder="Enter Borrower Name" />
-        <br>
-        <input name="ID" type="text" placeholder="Enter Borrower ID" /> 
-        <br>
-        <button id="borrowerLogInSubmit" type="submit">Log-In</button>
-    </form>
-    <form id="borrowerSignUpForm" method = 'POST' action = "">
-        <input name="name" type="text" placeholder="Enter Borrower Name" />
-        <br>
-        <input name="ID" type="text" placeholder="Enter Borrower Email" />
-        <br>
-        <input name="ID" type="text" placeholder="Enter Borrower Phone" />
-        <br>
-        <button id="borrowerSignUpSubmit" type="submit">Sign-Up</button>
-    </form>
-</div> -->
 <div id="borrower-form-div">
     <form id="borrower-form" action = "/borrower/insert" method="POST" >
         <input  type="text" name="borrowerIDnew" placeholder="Enter Borrower ID" required>
@@ -56,5 +35,5 @@
         </tr>
         {% endfor %}
     </table>
-    <a href="/">Back</a>
+    <a href="/employeeHome">Back</a>
 </div>
