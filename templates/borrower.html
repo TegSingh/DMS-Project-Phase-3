@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
 </head>
+<img src="../static/css/book_icon.png">
 <div id="borrower-header"><h1>Borrowers</h1></div>
 <div id="borrower-form-div">
     <form id="borrower-form" action = "/borrower/insert" method="POST" >
@@ -33,11 +34,11 @@
             <td> {{borrower[2]}} </td>
             <td> {{borrower[3]}} </td>
             <td>
-                <a href="borrower/edit/{{borrower[0]}}">Edit</a>
-                <a href="borrower/delete/{{borrower[0]}}">Delete</a>
+                <a href="borrower/edit/{{borrower[0]}}" class="edit">Edit</a>
+                <a href="borrower/delete/{{borrower[0]}}" class="delete">Delete</a>
             </td> 
         </tr>
         {% endfor %}
     </table>
-    <a href="/employeeHome">Back</a>
+    <a href="/employeeHome" class="back">&laquo; Back</a>
 </div>
