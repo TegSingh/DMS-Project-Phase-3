@@ -15,9 +15,63 @@ mysql = MySQL(app)
 # add secret key for encryption operations
 app.secret_key = "phase3"
 
+# Execute the following function when the app route is at localhost
 @app.route('/')
-def index():
-    return render_template('index.html')
+def homePage():
+    return render_template('home.html') 
+
+@app.route('/login', methods = ['POST'])
+def employeeLogin():
+    if request.method == 'POST':    
+        connection = mysql.connect()
+        cursor = connection.cursor()
+        employeeLoginName = request.form['employeeLoginName']
+        employeeLoginID = request.form['employeeLoginID']
+        result = cursor.execute("SELECT * FROM employee WHERE name = %s AND ID = %s", (employeeLoginName, employeeLoginID))
+        if result > 0: 
+            return redirect('\employeeHome')
+        cursor.close()
+
+@app.route('/employeeHome')
+def employeeHome():
+    return render_template("index.html")
+
+@app.route('/titleSearch', methods = ['POST'])
+def searchBookByTitle():
+    if request.method == 'POST':    
+        connection = mysql.connect()
+        cursor = connection.cursor()
+        searchTitle = request.form['searchTitle']
+        result = cursor.execute("SELECT * FROM books WHERE title = %s", searchTitle)
+        if result > 0: 
+            searchTitleDetails = cursor.fetchall()
+            return render_template('bookSearch.html', searchDetails = searchTitleDetails)
+        cursor.close()
+
+    
+@app.route('/authorSearch', methods = ['POST'])
+def searchBookByAuthor():
+    if request.method == 'POST':    
+        connection = mysql.connect()
+        cursor = connection.cursor()
+        searchAuthor = request.form['searchAuthor']
+        result = cursor.execute("SELECT * FROM books WHERE author_name = %s", searchAuthor)
+        if result > 0: 
+            searchAuthorDetails = cursor.fetchall()
+            return render_template('bookSearch.html', searchDetails = searchAuthorDetails)
+        cursor.close()
+    
+@app.route('/genreSearch', methods = ['POST'])
+def searchBookByGenre():
+    if request.method == 'POST':    
+        connection = mysql.connect()
+        cursor = connection.cursor()
+        searchGenre = request.form['searchGenre']
+        result = cursor.execute("SELECT * FROM books WHERE genre = %s", searchGenre)
+        if result > 0: 
+            searchGenreDetails = cursor.fetchall()
+            return render_template('bookSearch.html', searchDetails = searchGenreDetails)
+        cursor.close()    
 
 # DISPLAY     
 @app.route('/library_branch')

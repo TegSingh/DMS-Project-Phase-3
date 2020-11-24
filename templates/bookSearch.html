@@ -1,0 +1,34 @@
+<div id="books-details-search">
+    <table border="1">
+        <tr>
+            <th>ISBN Number</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Publisher</th>
+            <th>Author Name</th>
+            <th>Availability</th>
+            <th>Number of Copies</th>
+            <th>Borrower ID</th>
+            <th>Branch ID</th>
+            <th>Date to be Returned</th>
+            <th>Date Borrowed</th>
+            <th>Action</th>
+        </tr>
+        {% for book in searchDetails %}
+        <tr>
+            <td> {{book[0]}} </td>
+            <td> {{book[1]}} </td>
+            <td> {{book[2]}} </td>
+            <td> {{book[3]}} </td>
+            <td> {{book[4]}} </td>
+            <td> {{book[5]}} </td>
+            <td> {{book[6]}} </td>
+            <td> {{book[7]}} </td>
+            <td> {{book[8]}} </td>
+            <td> {{book[9]}} </td>
+            <td> {{book[10]}} </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back</a>
+</div>
