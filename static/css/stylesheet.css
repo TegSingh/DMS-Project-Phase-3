@@ -1,3 +1,44 @@
 .Form{
-    background-color: antiquewhite;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    border-radius: 10px;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+    background-color: white;
+    height: 60px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+img {
+    float: right;
+    height: 60px;
+    position: relative;
+    width: 50px;
+    margin-right: 100px;
+    filter: grayscale();
+}
+a{
+    margin-left: 30px;
+    padding-top: 30px;
+}
+input[type="text"], input[type="number"]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box
+
 }
