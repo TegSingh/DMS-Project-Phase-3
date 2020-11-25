@@ -29,7 +29,7 @@ def employeeLogin():
         employeeLoginID = request.form['employeeLoginID']
         result = cursor.execute("SELECT * FROM employee WHERE name = %s AND ID = %s", (employeeLoginName, employeeLoginID))
         if result > 0: 
-            return redirect('\employeeHome')
+            return redirect('/employeeHome')
         cursor.close()
 
 @app.route('/employeeHome')

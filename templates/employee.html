@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
 </head>
 <img src="../static/css/book_icon.png">
 <div id="employee-header"><h1>Employees</h1></div>
@@ -41,8 +41,8 @@
             <td> {{employee[4]}} </td>
             <td> {{employee[5]}} </td>
             <td>
-                <a href="employee/edit/{{employee[0]}}" class="edit">Edit</a>
-                <a href="employee/delete/{{employee[0]}}" class="delete">Delete</a>
+                <a href="employee/edit/{{employee[0]}}" class="edit" style="padding: 7px 12px 7px 12px; background-color: rgb(216, 81, 81); color: white; ">Edit</a>
+                <a href="employee/delete/{{employee[0]}}" class="delete" style="padding: 7px 12px 7px 12px; background-color: rgb(81, 151, 216); color: white; ">Delete</a>
             </td>
         </tr>
         {% endfor %}

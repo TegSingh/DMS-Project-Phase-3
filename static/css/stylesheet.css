@@ -136,4 +136,6 @@ a {
 .button:hover{
     background-color:  #45a049;
 }
-
+#searchBook {
+    background-color: lightgray;
+}

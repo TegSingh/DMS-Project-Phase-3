@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
 </head>
 <img src="../static/css/book_icon.png">
 <h1>
@@ -9,12 +9,13 @@
     <form id="EmployeeLogInForm" method = 'POST' action = "\login">
         <input name="employeeLoginName" type="text" placeholder="Enter Employee Name" />
         <br>
-        <input name="employeeLoginID" type="password" placeholder="Enter password" /> 
-        
+        <input name="employeeLoginID" type="password" placeholder="Enter password for Login" /> 
+        <br>
         <input id="employeeLogInSubmit" type="submit">
     </form>
 </div>
-<div id="searchBook">
+<div id="searchBook" style="background-color: lightgray;">
+    <br><br>
     <form id="searchbyTitle" method="POST" action="\titleSearch">
         <input name="searchTitle" type="text" placeholder="Enter Book Title to search for: ">
         <input type="submit">
@@ -27,4 +28,5 @@
         <input name="searchGenre" type="text" placeholder="Enter Genre to search for: ">
         <input type="submit">
     </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
