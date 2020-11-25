@@ -139,3 +139,13 @@ a {
 #searchBook {
     background-color: lightgray;
 }
+
+.log-out{
+    background-color:silver;
+    margin-top: 20px;
+    width: 65px;
+    border-radius: 15px;
+}
+.log-out:hover{
+    background-color: red;
+}
