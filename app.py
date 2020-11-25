@@ -1,4 +1,4 @@
-from flask import Flask, json, render_template, request, redirect, flash
+from flask import Flask, json, render_template, request, redirect, flash, jsonify
 from flaskext.mysql import MySQL
 from forms import booksForm, branchForm, borrowerForm, employeeForm
 import yaml
@@ -474,7 +474,43 @@ def view10():
     if result > 0:
         view10 = cursor.fetchall()
     return render_template('/views/view10.html', view10 = view10)
-
     
+# Add an internal api
+@app.route('/employee/api/<id>')
+def employeeApi(id):
+    connection = mysql.connect()
+    cursor = connection.cursor() 
+    result = cursor.execute("SELECT * FROM employee WHERE ID = %s", id)
+    if result > 0:
+        employeeJson = cursor.fetchall()
+        return jsonify(employeeJson)
+
+@app.route('/library_branch/api/<id>')
+def branchApi(id):
+    connection = mysql.connect()
+    cursor = connection.cursor() 
+    result = cursor.execute("SELECT * FROM library_branch WHERE branchID = %s", id)
+    if result > 0:
+        branchJson = cursor.fetchall()
+        return jsonify(branchJson)
+
+@app.route('/books/api/<id>')
+def booksApi(id):
+    connection = mysql.connect()
+    cursor = connection.cursor() 
+    result = cursor.execute("SELECT * FROM books WHERE ISBNnumber = %s", id)
+    if result > 0:
+        booksJson = cursor.fetchall()
+        return jsonify(booksJson)
+
+@app.route('/borrower/api/<id>')
+def borrowerApi(id):
+    connection = mysql.connect()
+    cursor = connection.cursor() 
+    result = cursor.execute("SELECT * FROM borrower WHERE ID = %s", id)
+    if result > 0:
+        borrowerJson = cursor.fetchall()
+        return jsonify(borrowerJson)
+
 if __name__ == '__main__':
     app.run(debug = True)
